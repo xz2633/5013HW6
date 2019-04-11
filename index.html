@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Let's workout</title>
+  </head>
+
+  <body>
+    <main></main>
+    <!-- Reference to the components -->
+    <script src="tags/speakbox.tag" type="riot/tag"></script>
+    <script src="tags/workout.tag" type="riot/tag"></script>
+    <script src="tags/pastsentence.tag" type="riot/tag"></script>
+    <script src="tags/main.tag" type="riot/tag"></script>
+
+    <script src="tags/speakbox2.tag" type="riot/tag"></script>
+    <script src="tags/workout2.tag" type="riot/tag"></script>
+    <script src="tags/pastsentence2.tag" type="riot/tag"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/riot@3.8/riot+compiler.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/riot/3.1/riot+compiler.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCBrgechw9qDC8wcP54LyNUBIWiPgkXraY",
+        authDomain: "digital-pet-bd951.firebaseapp.com",
+        databaseURL: "https://digital-pet-bd951.firebaseio.com",
+        projectId: "digital-pet-bd951",
+        storageBucket: "",
+        messagingSenderId: "69966368017"
+      };
+      firebase.initializeApp(config);
+
+      // Firebase Cached References
+      var database = firebase.database();
+      var rootRef = database.ref('/');
+      var observable = riot.observable();
+      riot.mount('*')
+    </script>
+
+    <style>
+    body{
+
+      padding: 10em;
+    }
+    </style>
+  </body>
+
+</html>
